@@ -10,7 +10,7 @@ import java.util.stream.Collectors;
 public class PathCollector {
     private static List<Path> paths = new ArrayList<>();
 
-    // gets all paths from files in directory
+    // collects all paths from files in source directory
     public static void collectPaths(Path path) {
         try {
             paths = Files.walk(path)

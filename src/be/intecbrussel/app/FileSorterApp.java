@@ -10,7 +10,6 @@ import static be.intecbrussel.utilities.SummaryMaker.writeSummary;
 
 public class FileSorterApp {
 
-    // class variable for summary indentation
     public static void main(String[] args) {
         Path unsortedPath = Paths.get("unsorted");
         Path sortedPath = Paths.get("sorted");

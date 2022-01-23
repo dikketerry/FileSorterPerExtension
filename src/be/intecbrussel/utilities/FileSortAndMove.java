@@ -19,6 +19,7 @@ public class FileSortAndMove {
 
                 // create path to new directory
                 Path newPath = sortedFolder.resolve(extension);
+
                 // if a file is hidden -> create 'hidden' directory
                 if (Files.isHidden(Paths.get(filePath))) {
                     newPath = sortedFolder.resolve("hidden");

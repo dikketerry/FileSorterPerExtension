@@ -9,9 +9,9 @@ import java.util.Formatter;
 import java.util.List;
 
 public class SummaryMaker {
-    private static int maxLength = 0;
+    private static int maxLength = 0; // used for checking maxLength filename
 
-    // creates the summary directory and file
+    // creates summary directory and summary file
     public static void createSummary(Path pathSummary) {
         try {
             Files.createDirectories(pathSummary.getParent());
@@ -44,8 +44,7 @@ public class SummaryMaker {
             String readableFile;
             String writableFile;
             for (Path p : paths) {
-                // converting path to string for extracting filename and
-                // directory name
+                // convert path to string for extract file- & directory name
                 String filePath = p.toString();
                 String fileName =
                         filePath.substring(filePath.lastIndexOf("/") + 1);
@@ -89,5 +88,4 @@ public class SummaryMaker {
             }
         }
     }
-
 }
